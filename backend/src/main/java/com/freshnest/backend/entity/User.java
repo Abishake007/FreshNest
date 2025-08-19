@@ -1,7 +1,8 @@
-package com.freshnest.entity;
+package com.freshnest.backend.entity;
 
 import jakarta.persistence.Entity;
 
+import com.freshnest.backend.enums.UserRole;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -28,7 +29,7 @@ public class User {
     @Column(name = "email")
     private String email;
 
-   
+   private UserRole role;
 
     @Lob
     @Column(columnDefinition = "LongBlob")
